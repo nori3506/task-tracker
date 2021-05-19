@@ -15,7 +15,7 @@ function App() {
       id: 2,
       text: "bbb",
       day: "asdfdsa",
-      reminder: false,
+      reminder: true,
     },
     {
       id: 3,
