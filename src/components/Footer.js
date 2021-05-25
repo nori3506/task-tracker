@@ -5,7 +5,10 @@ function footer() {
   return (
     <footer>
       <p>Copyright &copy; 2021</p>
-      <Link to="/about">About</Link>
+      < div className = "flexColumn" >
+        <Link to="/about">About</Link>
+        <Link to="/completed">Completed Tasks</Link>
+      </div>
     </footer>
   )
 }

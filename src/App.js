@@ -6,6 +6,7 @@ import Tasks from './components/Tasks'
 import AddTask from './components/AddTask'
 import Footer from './components/Footer'
 import About from './components/About'
+import Completed from './components/Completed'
 
 function App() {
   const [showAddTask, setShowAddTask] = useState(false)
@@ -67,6 +68,14 @@ function App() {
     setTasks([...tasks, data])
   }
 
+  const activeTask = async (task) => {
+    
+  }
+
+  const completeTask = async (task) => {
+    
+  }
+
   return (
     <Router>
       <div className="container">
@@ -74,11 +83,12 @@ function App() {
         <Route path='/' exact render={(props)=>(
           <>
             {showAddTask && <AddTask onAdd={ addTask } />}
-            {tasks.length > 0 ? <Tasks tasks={ tasks } onDelete={ deleteTask } onToggle={ toggleReminder } /> : "No Task to Show"}
+            {tasks.length > 0 ? <Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder} onActive={ activeTask } onCheck={ completeTask } /> : "No Task to Show"}
           </>
         )}
         />
         <Route path='/about' component={ About } />
+        <Route path='/completed' component={ Completed } />
         <Footer />
       </div>
     </Router>

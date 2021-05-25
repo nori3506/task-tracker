@@ -110,3 +110,12 @@ footer {
   margin-top: 30px;
   text-align: center;
 }
+
+.flexColumn {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.icons{
+  margin: 0 .5rem;
+}

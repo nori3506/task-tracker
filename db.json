@@ -5,14 +5,14 @@
       "text": "aaa",
       "day": "asdfdsa",
       "reminder": true,
-      "status": "Processing"
+      "status": "active"
     },
     {
       "text": "dafsf",
       "day": "df",
       "reminder": true,
       "id": 4,
-      "status": "processing"
+      "status": "active"
     },
     {
       "text": "fjdkl;ajf",
