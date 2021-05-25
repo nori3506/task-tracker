@@ -25,7 +25,15 @@
       "text": "aaasdf",
       "day": "asd",
       "reminder": false,
+      "status": "active",
       "id": 6
+    },
+    {
+      "text": "new task",
+      "day": "april1",
+      "reminder": true,
+      "status": "active",
+      "id": 7
     }
   ]
 }
