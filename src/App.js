@@ -88,7 +88,7 @@ function App() {
         )}
         />
         <Route path='/about' component={ About } />
-        <Route path='/completed' component={ Completed } />
+        <Route path='/completed' component={ Completed }/>
         <Footer />
       </div>
     </Router>

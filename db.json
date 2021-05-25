@@ -5,7 +5,7 @@
       "text": "aaa",
       "day": "asdfdsa",
       "reminder": true,
-      "status": "active"
+      "status": "completed"
     },
     {
       "text": "dafsf",
@@ -20,6 +20,12 @@
       "reminder": false,
       "id": 5,
       "status": "completed"
+    },
+    {
+      "text": "aaasdf",
+      "day": "asd",
+      "reminder": false,
+      "id": 6
     }
   ]
 }
