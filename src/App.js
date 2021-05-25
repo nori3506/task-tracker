@@ -29,7 +29,13 @@ function App() {
   const fetchTasks = async () => {
     const res = await fetch('http://localhost:5000/tasks')
     const data = await res.json()
-    return data
+    const activeTasks = []
+    data.map((fetchedTask) => {
+      if (fetchedTask.status === "active") {
+        activeTasks.push(fetchedTask)
+      }
+    })
+    return activeTasks
   }
 
   const deleteTask = async (id) => {

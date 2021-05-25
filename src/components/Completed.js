@@ -30,7 +30,6 @@ const Completed = () => {
         completedTasks.push(fetchedTask)
       }
     })
-    console.log(completedTasks)
     return completedTasks
   }
 
