@@ -104,11 +104,11 @@ function App() {
       body: JSON.stringify(updateTask)
     })
     const data = await res.json()
-    const newReview = completedTasks.map((task) => task.id === id ? { ...task, status: data.status } : task)
-
-    setCompletedTasks(newReview)
-    // setTasks(tasks.map((task) => task.id === id ? { ...task, status: "active" } : task))
-    // setTasks(tasks)
+    console.log(completedTasks)
+    setCompletedTasks(completedTasks => [...completedTasks])
+    setCompletedTasks(completedTasks.map((task) => task.id === id ? { ...task, status: "active" } : task))
+    setTasks(tasks.map((task) => task.id=== id ? { ...task, status: "active" } : task))
+    setTasks(tasks)
   }
 
   const completeTask = async (id) => {
