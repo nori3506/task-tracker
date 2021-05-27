@@ -104,11 +104,13 @@ function App() {
       body: JSON.stringify(updateTask)
     })
     const data = await res.json()
-    console.log(completedTasks)
-    setCompletedTasks(completedTasks => [...completedTasks])
-    setCompletedTasks(completedTasks.map((task) => task.id === id ? { ...task, status: "active" } : task))
-    setTasks(tasks.map((task) => task.id=== id ? { ...task, status: "active" } : task))
-    setTasks(tasks)
+    completedTasks.map((task) => {
+      if (task.id === id) {
+        task.status = data.status
+        setTasks(tasks => [...tasks, task])
+        setCompletedTasks(completedTasks.filter(completedTask => completedTask !== task))
+      }
+    })
   }
 
   const completeTask = async (id) => {
@@ -125,9 +127,11 @@ function App() {
       body: JSON.stringify(updateTask)
     })
     const data = await res.json()
-    completedTasks.map((completedTask) => {
-      if (completedTask.id === id) {
-        completedTask.status = data.status
+    tasks.map((task) => {
+      if (task.id === id) {
+        task.status = data.status
+        setCompletedTasks(completedTasks => [...completedTasks, task])
+        setTasks(tasks.filter(activetask => activetask !== task))
       }
     })
   }
