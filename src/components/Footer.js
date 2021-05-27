@@ -4,10 +4,11 @@ import { Link } from 'react-router-dom'
 function footer() {
   return (
     <footer>
-      <p>Copyright &copy; 2021</p>
       < div className = "flexColumn" >
-        <Link to="/about">About</Link>
+        <Link to = "/" > Active Tasks </Link>
         <Link to="/completed">Completed Tasks</Link>
+        <Link to="/about" > About </Link>
+        <p>Copyright &copy; 2021</p>
       </div>
     </footer>
   )
